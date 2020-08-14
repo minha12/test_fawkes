@@ -2,6 +2,14 @@
 
 In this repository I'm going to test the Fawkes (https://github.com/Shawn-Shan/fawkes) software to see how it protects user's privacy against Facial Recogntion (FR) system. Microsoft Azure Cognitive Service will be used as FR. This is a service package including many other sub-services, I will use the face service in this case (https://docs.microsoft.com/en-us/azure/cognitive-services/face/).
 
+From left-to-right: Original train image - cloak with min mode - cloak with high mode - test image 
+<p align='center'>
+  <img src='https://github.com/minha12/test_fawkes/blob/master/imm/train/01-1m.jpg' width='200'>
+  <img src='https://github.com/minha12/test_fawkes/blob/master/imm/train_min/01-1m_min_cloaked.png' width='200'>
+  <img src='https://github.com/minha12/test_fawkes/blob/master/imm/train_high/01-1m_high_cloaked.png' width='200'>
+  <img src='https://github.com/minha12/test_fawkes/blob/master/imm/test/01-6m.jpg' width='200'>
+</p> 
+
 ## Dataset
 
 IMM dataset (https://www2.imm.dtu.dk/~aam/datasets/datasets.html) will be used. This dataset includes:
@@ -16,85 +24,31 @@ IMM dataset (https://www2.imm.dtu.dk/~aam/datasets/datasets.html) will be used. 
 - Step4: Using test images to test the identitification capability. 
 
 ## Quick view of result with '-mode min'
+
 ```
-Identifying faces in 17-6m.jpg
-Succesfull identifed with confidence:  0.70441
-Identifying faces in 35-6f.jpg
-Succesfull identifed with confidence:  0.71688
-Identifying faces in 05-6m.jpg
-Succesfull identifed with confidence:  0.76879
-Identifying faces in 22-6f.jpg
-Succesfull identifed with confidence:  0.69649
-Identifying faces in 26-6m.jpg
-Succesfull identifed with confidence:  0.87816
-Identifying faces in 34-6m.jpg
-Succesfull identifed with confidence:  0.78223
-Identifying faces in 31-6m.jpg
-Succesfull identifed with confidence:  0.74775
-Identifying faces in 38-6m.jpg
-Succesfull identifed with confidence:  0.71601
+Identifying faces in 01-6m.jpg
+Succesfull identifed with confidence:  0.83565
 Identifying faces in 02-6m.jpg
 Succesfull identifed with confidence:  0.78883
-Identifying faces in 06-6m.jpg
-Succesfull identifed with confidence:  0.86857
-Identifying faces in 07-6m.jpg
-Succesfull identifed with confidence:  0.7365
-Identifying faces in 11-6m.jpg
-Succesfull identifed with confidence:  0.79475
-Identifying faces in 32-6m.jpg
-Succesfull identifed with confidence:  0.7848
-Identifying faces in 30-6f.jpg
-Succesfull identifed with confidence:  0.8192
-Identifying faces in 39-6m.jpg
-Succesfull identifed with confidence:  0.68639
-Identifying faces in 20-6m.jpg
-Succesfull identifed with confidence:  0.7155
-Identifying faces in 16-6m.jpg
-Succesfull identifed with confidence:  0.55272
-Identifying faces in 18-6m.jpg
-Succesfull identifed with confidence:  0.86173
-Identifying faces in 36-6m.jpg
-Succesfull identifed with confidence:  0.73877
-Identifying faces in 37-6m.jpg
-Succesfull identifed with confidence:  0.74653
-Identifying faces in 12-6f.jpg
-Succesfull identifed with confidence:  0.70208
-Identifying faces in 21-6m.jpg
-Succesfull identifed with confidence:  0.73285
-Identifying faces in 14-6f.jpg
-Succesfull identifed with confidence:  0.79513
-Identifying faces in 23-6m.jpg
-Succesfull identifed with confidence:  0.76362
-Identifying faces in 19-6m.jpg
-Succesfull identifed with confidence:  0.7652
-Identifying faces in 28-6m.jpg
-Succesfull identifed with confidence:  0.75379
-Identifying faces in 15-6f.jpg
-Succesfull identifed with confidence:  0.72639
-Identifying faces in 33-6m.jpg
-Succesfull identifed with confidence:  0.71798
-Identifying faces in 24-6m.jpg
-Succesfull identifed with confidence:  0.78832
-Identifying faces in 25-6m.jpg
-Succesfull identifed with confidence:  0.73501
-Identifying faces in 29-6m.jpg
-Succesfull identifed with confidence:  0.82223
 Identifying faces in 03-6m.jpg
 Succesfull identifed with confidence:  0.79678
 Identifying faces in 04-6m.jpg
 Succesfull identifed with confidence:  0.7752
-Identifying faces in 40-6m.jpg
-Succesfull identifed with confidence:  0.81176
-Identifying faces in 13-6m.jpg
-Succesfull identifed with confidence:  0.74826
+Identifying faces in 05-6m.jpg
+Succesfull identifed with confidence:  0.76879
+Identifying faces in 06-6m.jpg
+Succesfull identifed with confidence:  0.86857
+Identifying faces in 07-6m.jpg
+Succesfull identifed with confidence:  0.7365
 Identifying faces in 08-6f.jpg
 Succesfull identifed with confidence:  0.73986
-Identifying faces in 01-6m.jpg
-Succesfull identifed with confidence:  0.83565
-Identifying faces in 27-6m.jpg
-Succesfull identifed with confidence:  0.6546
-Identifying faces in 10-6m.jpg
-Succesfull identifed with confidence:  0.7982
 Identifying faces in 09-6m.jpg
 Succesfull identifed with confidence:  0.79151
+Identifying faces in 10-6m.jpg
+Succesfull identifed with confidence:  0.7982
 ```
+
+## What the numbers said
+The result showed that cloaking 100% of training images can reduce identification capability of FR, however, with ```-mode=min```, 100% identities have been re-indentified with confidence in range [0.55272, 0.87816]. Turining into ```-mode=high```, 47,5% of identities has not been re-identified while the remaining can still be re-indentified with confidence ranging in [0.51044, 0.63938].
+
+
