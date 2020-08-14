@@ -7,7 +7,7 @@ In this repository I'm going to test the Fawkes (https://github.com/Shawn-Shan/f
 IMM dataset (https://www2.imm.dtu.dk/~aam/datasets/datasets.html) will be used. This dataset includes:
 - 40 identities 
 - Each identity has 6 images on different poses, emotions and light condition.
-- There are 240 images in total. Train/Test set ratio will be 5/1 meaning that for each identity, 5 images will be used for training (these 5 image will be 'cloaked' by Fawkes software before using for training) 1 remaining image (uncloaked) will used for testing.
+- There are 240 images in total. Train/Test set ratio will be 5/1 meaning that for each identity, 5 images will be used for training (these 5 image will be 'cloaked' by Fawkes software before using for training) 1 remaining image (uncloaked) will be used for testing.
 
 ## Step-by-step:
 - Step1: Split train/test dataset (200/50 images)
