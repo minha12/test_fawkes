@@ -11,7 +11,7 @@ IMM dataset (https://www2.imm.dtu.dk/~aam/datasets/datasets.html) will be used. 
 
 ## Step-by-step:
 - Step1: Split train/test dataset (200/50 images)
-- Step2: Generate cloaked image from the train set. There cloaked images can be found in folder 'imm/train_min' or 'imm/train_high' depending on the '-mode' set to 'min' or 'high' while cloaking.
+- Step2: Generate cloaked images from the train set. These cloaked images can be found in folder 'imm/train_min' or 'imm/train_high' depending on the '-mode' set to 'min' or 'high' while cloaking.
 - Step3: Train FR model using Microsoft Azure Cognitive Service
 - Step4: Using test images to test the identitification capability. 
 
