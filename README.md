@@ -57,6 +57,6 @@ The result showed that cloaking 100% of training images can reduce identificatio
   <img src='https://github.com/minha12/test_fawkes/blob/master/confidence_hist_high.png' width='400'>
 </p> 
 
-Turining into ```-mode=high```, 47,5% of identities has not been re-identified while the remaining can still be re-indentified with confidence ranging in [0.51044, 0.63938].
+Turining into ```-mode=high```, 47,5% of identities has not been re-identified while the remaining can still be re-indentified with confidence ranging in [0.51044, 0.63938], however, the cloaked images are almost broken and probably not be able to, say, share online.
 
 
