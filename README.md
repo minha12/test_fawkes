@@ -1,4 +1,4 @@
-# Test fawkes
+# Fawkes' Tracker
 
 In this repository I'm going to test the Fawkes (https://github.com/Shawn-Shan/fawkes) software to see how it protects user's privacy against Facial Recogntion (FR) system. Microsoft Azure Cognitive Service will be used as FR. This is a service package including many other sub-services, I will use the face service in this case (https://docs.microsoft.com/en-us/azure/cognitive-services/face/).
 
@@ -49,6 +49,12 @@ Succesfull identifed with confidence:  0.7982
 ```
 
 ## What the numbers said
-The result showed that cloaking 100% of training images can reduce identification capability of FR, however, with ```-mode=min```, 100% identities have been re-indentified with confidence in range [0.55272, 0.87816]. Turining into ```-mode=high```, 47,5% of identities has not been re-identified while the remaining can still be re-indentified with confidence ranging in [0.51044, 0.63938].
+The result showed that cloaking 100% of training images can reduce identification capability of FR, however, with ```-mode=min```, 100% identities have been re-indentified with confidence in range [0.55272, 0.87816]. 
+
+<p align='center'>
+  <img src='https://github.com/minha12/test_fawkes/blob/master/confidence_hist.png' width='400'>
+</p> 
+
+Turining into ```-mode=high```, 47,5% of identities has not been re-identified while the remaining can still be re-indentified with confidence ranging in [0.51044, 0.63938].
 
 
