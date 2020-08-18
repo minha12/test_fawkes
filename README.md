@@ -1,4 +1,4 @@
-# Test fawkes
+# Fawkes' Tracker
 
 In this repository I'm going to test the Fawkes (https://github.com/Shawn-Shan/fawkes) software to see how it protects user's privacy against Facial Recogntion (FR) system. Microsoft Azure Cognitive Service will be used as FR. This is a service package including many other sub-services, I will use the face service in this case (https://docs.microsoft.com/en-us/azure/cognitive-services/face/).
 
